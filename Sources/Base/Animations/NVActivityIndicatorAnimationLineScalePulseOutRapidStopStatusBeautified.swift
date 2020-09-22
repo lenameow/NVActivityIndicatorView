@@ -62,7 +62,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
                 y = (layer.bounds.size.height - lineHeights[i] * size.height) / 2
             let line = NVActivityIndicatorShape.centeredLine.layerWith(
                 x: 0,
-                y: size.height * (1 + lineHeights[i]) / 2,
+                y: size.height * (1 - lineHeights[i]) / 2,
                 size: CGSize(
                     width: lineSize,
                     height: size.height * lineHeights[i]),

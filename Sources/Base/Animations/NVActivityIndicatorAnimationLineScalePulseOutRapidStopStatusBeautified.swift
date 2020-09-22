@@ -61,11 +61,16 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
             animation.values = [1 / lineHeights[i], 0.3 / lineHeights[i], 1 / lineHeights[i]]
                 y = (layer.bounds.size.height - lineHeights[i] * size.height) / 2
             let line = NVActivityIndicatorShape.line.layerWith(
-                size: CGSize(width: lineSize,
-                             height: size.height * lineHeights[i]),
-                color: color)
+                size: CGSize(
+                    x: 0,
+                    y: size.height * (1 + lineHeights[i]) / 2
+                    width: lineSize,
+                    height: size.height * lineHeights[i]),
+                color: color
+            )
             let frame = CGRect(x: x + lineSize * 2 * CGFloat(i),
                                y: y + (1 - lineHeights[i]) / 2 * size.height,
+//                               y: y,
                                width: lineSize,
                                height: size.height)
 

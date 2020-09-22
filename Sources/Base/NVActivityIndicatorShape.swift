@@ -38,11 +38,12 @@ enum NVActivityIndicatorShape {
     case rectangle
     case triangle
     case line
+    case centeredLine
     case pacman
     case stroke
 
     // swiftlint:disable:next cyclomatic_complexity function_body_length
-    func layerWith(size: CGSize, color: UIColor) -> CALayer {
+    func layerWith(x: CGFloat, y: CGFloat, size: CGSize, color: UIColor) -> CALayer {
         let layer: CAShapeLayer = CAShapeLayer()
         var path: UIBezierPath = UIBezierPath()
         let lineWidth: CGFloat = 2
@@ -133,6 +134,10 @@ enum NVActivityIndicatorShape {
             layer.fillColor = color.cgColor
         case .line:
             path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: size.width, height: size.height),
+                                cornerRadius: size.width / 2)
+            layer.fillColor = color.cgColor
+        case .centeredLine:
+            path = UIBezierPath(roundedRect: CGRect(x: x, y: y, width: size.width, height: size.height),
                                 cornerRadius: size.width / 2)
             layer.fillColor = color.cgColor
         case .pacman:

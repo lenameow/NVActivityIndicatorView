@@ -32,11 +32,11 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
 
     func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
         let lineSize = size.width / 9
-        let lineHeights = [CGFloat(0.4),
-                           CGFloat(0.8),
-                           CGFloat(0.6),
+        let lineHeights = [CGFloat(1),
+                           CGFloat(0.3),
                            CGFloat(1),
-                           CGFloat(0.5)]
+                           CGFloat(0.3),
+                           CGFloat(1)]
         let x = (layer.bounds.size.width - size.width) / 2
 //        let y = (layer.bounds.size.height - size.height) / 2
         let y = size.height

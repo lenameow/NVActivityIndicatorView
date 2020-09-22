@@ -541,7 +541,7 @@ public final class NVActivityIndicatorView: UIView {
             return
         }
         isHidden = false
-        isAnimating = false
+        layer.speed = 0
     }
 
     // MARK: Internal

@@ -39,7 +39,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
                            CGFloat(1)]
         let x = (layer.bounds.size.width - size.width) / 2
 //        let y = (layer.bounds.size.height - size.height) / 2
-        let y = (layer.bounds.size.height - layer.bounds.size.height) / 2
+        var y: CGFloat = 0
         let duration: CFTimeInterval = 0.9
         let beginTime = CACurrentMediaTime()
         let beginTimes = [0.5, 0.25, 0, 0.25, 0.5]
@@ -60,8 +60,10 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
         for i in 0 ..< 5 {
             if [1, 3].contains(i) {
                 animation.values = [1, 10 / 3, 1]
+                y = (layer.bounds.size.height - 0.3 * size.height) / 2
             } else {
                 animation.values = [1, 0.3, 1]
+                y = (layer.bounds.size.height - size.height) / 2
             }
             let line = NVActivityIndicatorShape.line.layerWith(
                 size: CGSize(width: lineSize,

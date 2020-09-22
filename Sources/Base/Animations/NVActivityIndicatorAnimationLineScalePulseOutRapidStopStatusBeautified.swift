@@ -65,7 +65,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
                              height: size.height * lineHeights[i]),
                 color: color)
             let frame = CGRect(x: x + lineSize * 2 * CGFloat(i),
-                               y: y,
+                               y: y - lineHeights[i] * size.height / 2,
                                width: lineSize,
                                height: size.height)
 

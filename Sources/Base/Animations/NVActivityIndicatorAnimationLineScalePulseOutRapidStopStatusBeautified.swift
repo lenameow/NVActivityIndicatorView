@@ -57,7 +57,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
 
         // Draw lines
         for i in 0 ..< 5 {
-            if [2, 4].contains(i) {
+            if [1, 3].contains(i) {
                 animation.values = [1, 10 / 3, 1]
             } else {
                 animation.values = [1, 0.3, 1]

@@ -32,14 +32,13 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
 
     func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
         let lineSize = size.width / 9
-        let lineHeights = [CGFloat(1),
-                           CGFloat(0.3),
+        let lineHeights = [CGFloat(0.3),
+                           CGFloat(0.8),
+                           CGFloat(0.6),
                            CGFloat(1),
-                           CGFloat(0.3),
-                           CGFloat(1)]
+                           CGFloat(0.5)]
         let x = (layer.bounds.size.width - size.width) / 2
         let frameY = (layer.bounds.size.height - size.height) / 2
-        var y: CGFloat = 0
         let duration: CFTimeInterval = 0.9
         let beginTime = CACurrentMediaTime()
         let beginTimes = [0.5, 0.25, 0, 0.25, 0.5]
@@ -59,7 +58,6 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
         // Draw lines
         for i in 0 ..< 5 {
             animation.values = [1 / lineHeights[i], 0.3 / lineHeights[i], 1 / lineHeights[i]]
-                y = (layer.bounds.size.height - lineHeights[i] * size.height) / 2
             let line = NVActivityIndicatorShape.centeredLine.layerWith(
                 x: 0,
                 y: size.height * (1 - lineHeights[i]) / 2,
@@ -68,11 +66,11 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
                     height: size.height * lineHeights[i]),
                 color: color
             )
-            let frame = CGRect(x: x + lineSize * 2 * CGFloat(i),
-//                               y: y + (1 - lineHeights[i]) / 2 * size.height,
-                               y: frameY,
-                               width: lineSize,
-                               height: size.height)
+            let frame = CGRect(
+                x: x + lineSize * 2 * CGFloat(i),
+                y: frameY,
+                width: lineSize,
+                height: size.height)
 
             animation.beginTime = beginTime + beginTimes[i]
             line.frame = frame

@@ -535,6 +535,14 @@ public final class NVActivityIndicatorView: UIView {
         isAnimating = false
         layer.sublayers?.removeAll()
     }
+    
+    public final func stopAnimatingKeepView() {
+        guard isAnimating else {
+            return
+        }
+        isHidden = false
+        isAnimating = false
+    }
 
     // MARK: Internal
 

@@ -572,44 +572,44 @@ public final class NVActivityIndicatorView: UIView {
         animation.setUpAnimation(in: layer, size: animationRect.size, color: color)
     }
     
-    func drawPulseRapidStopImage() -> UIView {
-        let view = UIView()
-        var animationRect = frame.inset(by: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
-        let minEdge = min(animationRect.width, animationRect.height)
-
-        view.layer.sublayers = nil
-        animationRect.size = CGSize(width: minEdge, height: minEdge)
-        let size = animationRect.size
-        let lineSize = size.width / 9
-        let lineHeights = [CGFloat(0.8),
-                           CGFloat(0.4),
-                           CGFloat(1),
-                           CGFloat(0.3),
-                           CGFloat(0.6)]
-        let x = (view.layer.bounds.size.width - size.width) / 2
-        var y: CGFloat = 0
-//        let animation = CAKeyframeAnimation(keyPath: "transform.scale.y")
+//    func drawPulseRapidStopImage() -> UIView {
+//        let view = UIView()
+//        var animationRect = frame.inset(by: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
+//        let minEdge = min(animationRect.width, animationRect.height)
 //
-//        animation.keyTimes = [0, 0.8, 0.9]
-//        animation.repeatCount = HUGE
-//        animation.isRemovedOnCompletion = false
-
-        // Draw lines
-        for i in 0 ..< 5 {
-                y = (view.layer.bounds.size.height - lineHeights[i] * size.height) / 2
-            let line = NVActivityIndicatorShape.line.layerWith(
-                size: CGSize(width: lineSize,
-                             height: size.height * lineHeights[i]),
-                color: color)
-            let frame = CGRect(x: x + lineSize * 2 * CGFloat(i),
-                               y: y,
-                               width: lineSize,
-                               height: size.height)
-            line.frame = frame
-//            line.add(animation, forKey: "animation")
-            view.layer.addSublayer(line)
-        }
-        return view
-    }
+//        view.layer.sublayers = nil
+//        animationRect.size = CGSize(width: minEdge, height: minEdge)
+//        let size = animationRect.size
+//        let lineSize = size.width / 9
+//        let lineHeights = [CGFloat(0.8),
+//                           CGFloat(0.4),
+//                           CGFloat(1),
+//                           CGFloat(0.3),
+//                           CGFloat(0.6)]
+//        let x = (view.layer.bounds.size.width - size.width) / 2
+//        var y: CGFloat = 0
+////        let animation = CAKeyframeAnimation(keyPath: "transform.scale.y")
+////
+////        animation.keyTimes = [0, 0.8, 0.9]
+////        animation.repeatCount = HUGE
+////        animation.isRemovedOnCompletion = false
+//
+//        // Draw lines
+//        for i in 0 ..< 5 {
+//                y = (view.layer.bounds.size.height - lineHeights[i] * size.height) / 2
+//            let line = NVActivityIndicatorShape.line.layerWith(
+//                size: CGSize(width: lineSize,
+//                             height: size.height * lineHeights[i]),
+//                color: color)
+//            let frame = CGRect(x: x + lineSize * 2 * CGFloat(i),
+//                               y: y,
+//                               width: lineSize,
+//                               height: size.height)
+//            line.frame = frame
+////            line.add(animation, forKey: "animation")
+//            view.layer.addSublayer(line)
+//        }
+//        return view
+//    }
 }
 #endif

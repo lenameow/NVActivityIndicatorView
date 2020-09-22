@@ -58,13 +58,8 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
 
         // Draw lines
         for i in 0 ..< 5 {
-            if [1, 3].contains(i) {
-                animation.values = [1, 10 / 3, 1]
-                y = (layer.bounds.size.height - 0.3 * size.height) / 2
-            } else {
-                animation.values = [1, 0.3, 1]
-                y = (layer.bounds.size.height - size.height) / 2
-            }
+            animation.values = [1 / lineHeights[i], 0.3 / lineHeights[i], 1 / lineHeights[i]]
+                y = (layer.bounds.size.height - lineHeights[i] * size.height) / 2
             let line = NVActivityIndicatorShape.line.layerWith(
                 size: CGSize(width: lineSize,
                              height: size.height * lineHeights[i]),

@@ -65,7 +65,7 @@ class NVActivityIndicatorAnimationBallTrianglePath: NVActivityIndicatorAnimation
         layer.addSublayer(bottomLeftCircle)
 
         // Bottom-right circle
-        let bottomRightCircle = NVActivityIndicatorShape.ring.layerWith(size: CGSize(width: circleSize, height: circleSize), color: color)
+        let bottomRightCircle = NVActivityIndicatorShape.ring.layerWith(x: 0, y: 0, size: CGSize(width: circleSize, height: circleSize), color: color)
 
         changeAnimation(animation, values: ["{0,0}", "{-fx,0}", "{-hx,-fy}", "{0,0}"], deltaX: deltaX, deltaY: deltaY)
         bottomRightCircle.frame = CGRect(x: x + size.width - circleSize, y: y + size.height - circleSize, width: circleSize, height: circleSize)

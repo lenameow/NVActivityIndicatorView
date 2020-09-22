@@ -59,7 +59,7 @@ class NVActivityIndicatorAnimationCircleStrokeSpin: NVActivityIndicatorAnimation
         groupAnimation.isRemovedOnCompletion = false
         groupAnimation.fillMode = .forwards
 
-        let circle = NVActivityIndicatorShape.stroke.layerWith(size: size, color: color)
+        let circle = NVActivityIndicatorShape.stroke.layerWith(x: 0, y: 0, size: size, color: color)
         let frame = CGRect(
             x: (layer.bounds.width - size.width) / 2,
             y: (layer.bounds.height - size.height) / 2,

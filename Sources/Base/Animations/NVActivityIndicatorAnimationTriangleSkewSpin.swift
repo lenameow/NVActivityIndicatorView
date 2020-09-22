@@ -53,7 +53,7 @@ class NVActivityIndicatorAnimationTriangleSkewSpin: NVActivityIndicatorAnimation
         animation.isRemovedOnCompletion = false
 
         // Draw triangle
-        let triangle = NVActivityIndicatorShape.triangle.layerWith(size: size, color: color)
+        let triangle = NVActivityIndicatorShape.triangle.layerWith(x: 0, y: 0, size: size, color: color)
 
         triangle.frame = CGRect(x: x, y: y, width: size.width, height: size.height)
         triangle.add(animation, forKey: "animation")

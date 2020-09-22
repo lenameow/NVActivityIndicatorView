@@ -84,7 +84,7 @@ class NVActivityIndicatorAnimationBallClipRotateMultiple: NVActivityIndicatorAni
 
     // swiftlint:disable:next function_parameter_count
     func circleOf(shape: NVActivityIndicatorShape, duration: CFTimeInterval, timingFunction: CAMediaTimingFunction, layer: CALayer, size: CGFloat, color: UIColor, reverse: Bool) {
-        let circle = shape.layerWith(size: CGSize(width: size, height: size), color: color)
+        let circle = shape.layerWith(x: 0, y: 0, size: CGSize(width: size, height: size), color: color)
         let frame = CGRect(x: (layer.bounds.size.width - size) / 2,
                            y: (layer.bounds.size.height - size) / 2,
                            width: size,

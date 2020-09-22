@@ -73,7 +73,7 @@ class NVActivityIndicatorAnimationLineSpinFadeLoader: NVActivityIndicatorAnimati
             y: origin.y + radius * (sin(angle) + 1),
             width: lineContainerSize.width,
             height: lineContainerSize.height)
-        let line = NVActivityIndicatorShape.line.layerWith(size: size, color: color)
+        let line = NVActivityIndicatorShape.line.layerWith(x: 0, y: 0, size: size, color: color)
         let lineFrame = CGRect(
             x: (lineContainerSize.width - size.width) / 2,
             y: (lineContainerSize.height - size.height) / 2,

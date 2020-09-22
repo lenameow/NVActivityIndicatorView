@@ -51,7 +51,7 @@ class NVActivityIndicatorAnimationSquareSpin: NVActivityIndicatorAnimationDelega
         animation.isRemovedOnCompletion = false
 
         // Draw square
-        let square = NVActivityIndicatorShape.rectangle.layerWith(size: size, color: color)
+        let square = NVActivityIndicatorShape.rectangle.layerWith(x: 0, y: 0, size: size, color: color)
         let frame = CGRect(x: (layer.bounds.size.width - size.width) / 2,
                            y: (layer.bounds.size.height - size.height) / 2,
                            width: size.width,

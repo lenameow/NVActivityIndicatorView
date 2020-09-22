@@ -60,7 +60,7 @@ class NVActivityIndicatorAnimationBallScaleMultiple: NVActivityIndicatorAnimatio
 
         // Draw balls
         for i in 0 ..< 3 {
-            let circle = NVActivityIndicatorShape.circle.layerWith(size: size, color: color)
+            let circle = NVActivityIndicatorShape.circle.layerWith(x: 0, y: 0, size: size, color: color)
             let frame = CGRect(x: (layer.bounds.size.width - size.width) / 2,
                                y: (layer.bounds.size.height - size.height) / 2,
                                width: size.width,

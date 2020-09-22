@@ -65,7 +65,7 @@ class NVActivityIndicatorAnimationPacman: NVActivityIndicatorAnimationDelegate {
         animation.isRemovedOnCompletion = false
 
         // Draw pacman
-        let pacman = NVActivityIndicatorShape.pacman.layerWith(size: CGSize(width: pacmanSize, height: pacmanSize), color: color)
+        let pacman = NVActivityIndicatorShape.pacman.layerWith(x: 0, y: 0, size: CGSize(width: pacmanSize, height: pacmanSize), color: color)
         let frame = CGRect(
             x: (layer.bounds.size.width - size.width) / 2,
             y: (layer.bounds.size.height - pacmanSize) / 2,

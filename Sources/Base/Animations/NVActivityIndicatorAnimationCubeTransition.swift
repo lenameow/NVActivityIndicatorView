@@ -81,7 +81,7 @@ class NVActivityIndicatorAnimationCubeTransition: NVActivityIndicatorAnimationDe
 
         // Draw squares
         for i in 0 ..< 2 {
-            let square = NVActivityIndicatorShape.rectangle.layerWith(size: CGSize(width: squareSize, height: squareSize), color: color)
+            let square = NVActivityIndicatorShape.rectangle.layerWith(x: 0, y: 0, size: CGSize(width: squareSize, height: squareSize), color: color)
             let frame = CGRect(x: x, y: y, width: squareSize, height: squareSize)
 
             animation.beginTime = beginTime + beginTimes[i]

@@ -51,7 +51,7 @@ class NVActivityIndicatorAnimationBallClipRotatePulse: NVActivityIndicatorAnimat
 
         // Draw circle
         let circleSize = size.width / 2
-        let circle = NVActivityIndicatorShape.circle.layerWith(size: CGSize(width: circleSize, height: circleSize), color: color)
+        let circle = NVActivityIndicatorShape.circle.layerWith(x: 0, y: 0, size: CGSize(width: circleSize, height: circleSize), color: color)
         let frame = CGRect(x: (layer.bounds.size.width - circleSize) / 2,
                            y: (layer.bounds.size.height - circleSize) / 2,
                            width: circleSize,

@@ -64,7 +64,7 @@ class NVActivityIndicatorAnimationBallGridPulse: NVActivityIndicatorAnimationDel
         // Draw circles
         for i in 0 ..< 3 {
             for j in 0 ..< 3 {
-                let circle = NVActivityIndicatorShape.circle.layerWith(size: CGSize(width: circleSize, height: circleSize), color: color)
+                let circle = NVActivityIndicatorShape.circle.layerWith(x: 0, y: 0, size: CGSize(width: circleSize, height: circleSize), color: color)
                 let frame = CGRect(x: x + circleSize * CGFloat(j) + circleSpacing * CGFloat(j),
                                    y: y + circleSize * CGFloat(i) + circleSpacing * CGFloat(i),
                                    width: circleSize,

@@ -69,7 +69,7 @@ class NVActivityIndicatorAnimationBallZigZagDeflect: NVActivityIndicatorAnimatio
     }
 
     func circleAt(frame: CGRect, layer: CALayer, size: CGSize, color: UIColor, animation: CAAnimation) {
-        let circle = NVActivityIndicatorShape.circle.layerWith(size: size, color: color)
+        let circle = NVActivityIndicatorShape.circle.layerWith(x: 0, y: 0, size: size, color: color)
 
         circle.frame = frame
         circle.add(animation, forKey: "animation")

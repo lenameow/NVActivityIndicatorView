@@ -38,7 +38,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
                            CGFloat(0.3),
                            CGFloat(1)]
         let x = (layer.bounds.size.width - size.width) / 2
-//        let y = (layer.bounds.size.height - size.height) / 2
+        let frameY = (layer.bounds.size.height - size.height) / 2
         var y: CGFloat = 0
         let duration: CFTimeInterval = 0.9
         let beginTime = CACurrentMediaTime()
@@ -69,8 +69,8 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
                 color: color
             )
             let frame = CGRect(x: x + lineSize * 2 * CGFloat(i),
-                               y: y + (1 - lineHeights[i]) / 2 * size.height,
-//                               y: y,
+//                               y: y + (1 - lineHeights[i]) / 2 * size.height,
+                               y: frameY,
                                width: lineSize,
                                height: size.height)
 

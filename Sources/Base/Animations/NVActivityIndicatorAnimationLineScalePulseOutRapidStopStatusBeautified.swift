@@ -41,8 +41,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
 //        let y = (layer.bounds.size.height - size.height) / 2
         let y = size.height
         let duration: CFTimeInterval = 0.9
-//        let beginTime = CACurrentMediaTime()
-        let beginTime = 0.3
+        let beginTime = CACurrentMediaTime()
         let beginTimes = [0.5, 0.25, 0, 0.25, 0.5]
         let timingFunction = CAMediaTimingFunction(controlPoints: 0.11, 0.49, 0.38, 0.78)
 

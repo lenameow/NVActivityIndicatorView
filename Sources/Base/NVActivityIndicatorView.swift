@@ -200,6 +200,12 @@ public enum NVActivityIndicatorType: CaseIterable {
      */
     case lineScalePulseOutRapid
     /**
+     lineScalePulseOutRapidStopStatusBeautified.
+
+     - returns: Instance of NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified.
+     */
+    case lineScalePulseOutRapidStopStatusBeautified
+    /**
      BallScaleRipple.
 
      - returns: Instance of NVActivityIndicatorAnimationBallScaleRipple.
@@ -319,6 +325,8 @@ public enum NVActivityIndicatorType: CaseIterable {
             return NVActivityIndicatorAnimationLineScalePulseOut()
         case .lineScalePulseOutRapid:
             return NVActivityIndicatorAnimationLineScalePulseOutRapid()
+        case .lineScalePulseOutRapidStopStatusBeautified:
+            return NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified()
         case .ballScaleRipple:
             return NVActivityIndicatorAnimationBallScaleRipple()
         case .ballScaleRippleMultiple:

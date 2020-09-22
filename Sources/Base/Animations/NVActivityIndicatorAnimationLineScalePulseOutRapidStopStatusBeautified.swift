@@ -35,7 +35,7 @@ class NVActivityIndicatorAnimationLineScalePulseOutRapidStopStatusBeautified: NV
         let lineHeights = [CGFloat(0.3),
                            CGFloat(1),
                            CGFloat(0.5),
-                           CGFloat(0.7),
+                           CGFloat(0.8),
                            CGFloat(0.4)]
         let x = (layer.bounds.size.width - size.width) / 2
         let frameY = (layer.bounds.size.height - size.height) / 2
